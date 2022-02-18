@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "VTOP CAPCHA SOLVER",
+  "description": "Easier and user-friendly vtop",
+  "version": "0.0.1",
+  "author": "ASHUTOSH KALA",
+  "permissions": [
+    "webRequest",
+    "downloads",
+    "storage",
+    "declarativeContent",
+    "activeTab",
+    "*://vtop.vit.ac.in/*"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "download.png"
+    
+},
+  
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "*://vtop.vit.ac.in/*"
+      ],
+      "js": [
+        "bitmaps.js",
+        "general.js",
+        "captchaparser.js",
+        "utils.js"
+      ]
+    }
+  ]
+}
